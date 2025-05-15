@@ -9,6 +9,11 @@ DEVICE_PATH := device/samsung/a71
 # Inherit Common Device Tree
 $(call inherit-product, device/samsung/a71-common/common.mk)
 
+# DerpFest Flags
+DERPFEST_BUILD_TYPE := Official
+DERP_VERSION_APPEND_TIME_OF_DAY=true
+TARGET_NOT_USES_BLUR=true
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/vendor/etc/mixer_paths_idp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_idp.xml \
